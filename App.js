@@ -1,21 +1,37 @@
-import { StyleSheet, Text, View, StatusBar } from 'react-native'; // Import StatusBar from react-native
-import Head from "./Components/Head"; // Import Head from your local component
-
+import {View,Text, StyleSheet} from 'react-native'
+import Header from './components/header';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" /> {/* Ensure StatusBar is imported correctly */}
-    </View>
+    <>
+    <Header name="cat header"></Header>
+    <Header name="dog header"></Header>
+    <Header name="abc header"></Header>
+    <Header name="sjs header"></Header>
+
+<View style={styles.container}>
+  <Text style={styles.textBox}>Hello world</Text>
+</View>
+
+</>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const styles=StyleSheet.create(
+{
+  container:{
+    display:'flex',
+    flex:1, 
+    justifyContent:'center', 
+    alignItems:'center',
+    backgroundColor:'black'
+
   },
-});
+  textBox:
+  {
+    color:'red', 
+    backgroundColor:'purple'
+
+  }
+}
+);
 
